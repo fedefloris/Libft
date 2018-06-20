@@ -14,9 +14,9 @@
 
 t_list		*ft_lstat(t_list *lst, size_t nbr)
 {
-	if (lst)
+	if (!lst)
 		return (NULL);
-	while (nbr-- && lst != NULL)
+	while (nbr-- && lst)
 		lst = lst->next;
 	return ((!nbr) ? lst : NULL);
 }
