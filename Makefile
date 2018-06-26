@@ -47,7 +47,8 @@ LIBFT_OUT_OBJS = ft_putchar.o ft_putwchar.o \
 LIBFT_STRING_OBJS = ft_strlen.o ft_strdup.o ft_strcpy.o \
 	ft_strncpy.o ft_strcat.o ft_strncat.o ft_strlcat.o \
 	ft_strchr.o ft_strrchr.o ft_strstr.o ft_strnstr.o \
-	ft_strcmp.o ft_strncmp.o ft_atoi.o ft_atoi_n.o ft_isalpha.o \
+	ft_strcmp.o ft_strncmp.o ft_atoi.o ft_atoi_n.o \
+	ft_atol.o ft_atoll.o ft_isalpha.o \
 	ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o \
 	ft_toupper.o ft_tolower.o ft_islower.o ft_isspace.o \
 	ft_isupper.o ft_strnew.o ft_strdel.o ft_strclr.o \
@@ -84,6 +85,9 @@ OBJS += $(patsubst %, $(LIBFT_STRING_OBJS_DIR)/%, $(LIBFT_STRING_OBJS))
 
 SRCS = $(patsubst $(LIBFT_OBJS_DIR)/%.o, $(LIBFT_SRCS_DIR)/%.c, $(OBJS))
 
+GREEN_COLOR = "\033[0;32m"
+DEFAULT_COLOR = "\033[0m"
+
 all: $(NAME)
 
 norm:
@@ -97,7 +101,7 @@ $(LIBFT_OBJS_DIRS):
 	@mkdir -p $(LIBFT_OBJS_DIRS)
 	
 $(LIBFT_OBJS_DIR)/%.o: $(LIBFT_SRCS_DIR)/%.c
-	@echo "Libft: \033[0;32m" $< "\033[0m"
+	@echo "Libft: " $(GREEN_COLOR) $< $(DEFAULT_COLOR) 
 	@cc $(GCC_FLAGS) -c $< -o $@ -I $(LIBFT_INCLUDES_DIR)/
 
 clean:

@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi_n.c                                        :+:      :+:    :+:   */
+/*   ft_atoll.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ffloris <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/16 16:54:38 by ffloris           #+#    #+#             */
-/*   Updated: 2018/05/16 11:17:40 by ffloris          ###   ########.fr       */
+/*   Created: 2018/06/26 13:51:59 by ffloris           #+#    #+#             */
+/*   Updated: 2018/06/26 13:52:00 by ffloris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi_n(const char *str, size_t n)
+long long		ft_atoll(const char *str)
 {
-	unsigned int	nbr;
-	int				neg;
+	unsigned long long	nbr;
+	int					neg;
 
 	while (ft_isspace(*str))
 		str++;
@@ -31,10 +31,10 @@ int		ft_atoi_n(const char *str, size_t n)
 			str++;
 	}
 	nbr = 0;
-	while (ft_isdigit(*str) && n--)
+	while (ft_isdigit(*str))
 	{
 		nbr = nbr * 10 + (*str - '0');
 		str++;
 	}
-	return (neg) ? -(int)nbr : (int)nbr;
+	return (neg) ? -(long long)nbr : (long long)nbr;
 }
