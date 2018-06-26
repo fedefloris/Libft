@@ -75,7 +75,6 @@ LIBFT_INCLUDES_DIR = includes
 LIBFT_INCLUDES_FILES = ft_printf ft_printf_colors ft_printf_put libft
 LIBFT_HEADERS = $(addsuffix .h, $(patsubst %, $(LIBFT_INCLUDES_DIR)/%, $(LIBFT_INCLUDES_FILES)))
 
-
 OBJS = $(patsubst %, $(LIBFT_IN_OBJS_DIR)/%, $(LIBFT_IN_OBJS))
 OBJS += $(patsubst %, $(LIBFT_LIST_OBJS_DIR)/%, $(LIBFT_LIST_OBJS))
 OBJS += $(patsubst %, $(LIBFT_MATH_OBJS_DIR)/%, $(LIBFT_MATH_OBJS))
