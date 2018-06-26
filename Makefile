@@ -75,12 +75,12 @@ LIBFT_INCLUDES_DIR = includes
 LIBFT_INCLUDES_FILES = ft_printf ft_printf_colors ft_printf_put libft
 LIBFT_HEADERS = $(addsuffix .h, $(patsubst %, $(LIBFT_INCLUDES_DIR)/%, $(LIBFT_INCLUDES_FILES)))
 
-OBJS = $(patsubst %, $(LIBFT_IN_OBJS_DIR)/%, $(LIBFT_IN_OBJS))
-OBJS += $(patsubst %, $(LIBFT_LIST_OBJS_DIR)/%, $(LIBFT_LIST_OBJS))
-OBJS += $(patsubst %, $(LIBFT_MATH_OBJS_DIR)/%, $(LIBFT_MATH_OBJS))
-OBJS += $(patsubst %, $(LIBFT_MEMORY_OBJS_DIR)/%, $(LIBFT_MEMORY_OBJS))
-OBJS += $(patsubst %, $(LIBFT_OUT_OBJS_DIR)/%, $(LIBFT_OUT_OBJS))
-OBJS += $(patsubst %, $(LIBFT_STRING_OBJS_DIR)/%, $(LIBFT_STRING_OBJS))
+OBJS = $(addprefix $(LIBFT_IN_OBJS_DIR)/, $(LIBFT_IN_OBJS))
+OBJS += $(addprefix $(LIBFT_LIST_OBJS_DIR)/, $(LIBFT_LIST_OBJS))
+OBJS += $(addprefix $(LIBFT_MATH_OBJS_DIR)/, $(LIBFT_MATH_OBJS))
+OBJS += $(addprefix $(LIBFT_MEMORY_OBJS_DIR)/, $(LIBFT_MEMORY_OBJS))
+OBJS += $(addprefix $(LIBFT_OUT_OBJS_DIR)/, $(LIBFT_OUT_OBJS))
+OBJS += $(addprefix $(LIBFT_STRING_OBJS_DIR)/, $(LIBFT_STRING_OBJS))
 
 SRCS = $(patsubst $(LIBFT_OBJS_DIR)/%.o, $(LIBFT_SRCS_DIR)/%.c, $(OBJS))
 
@@ -92,14 +92,14 @@ all: $(NAME)
 norm:
 	@norminette $(LIBFT_INCLUDES_DIR) $(LIBFT_SRCS_DIR)
 
-$(NAME): $(LIBFT_OBJS_DIRS) $(LIBFT_HEADERS) $(OBJS)
+$(NAME): $(LIBFT_OBJS_DIRS) $(OBJS)
 	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
 
 $(LIBFT_OBJS_DIRS):
 	@mkdir -p $(LIBFT_OBJS_DIRS)
 	
-$(LIBFT_OBJS_DIR)/%.o: $(LIBFT_SRCS_DIR)/%.c
+$(LIBFT_OBJS_DIR)/%.o: $(LIBFT_SRCS_DIR)/%.c $(LIBFT_HEADERS)
 	@echo "Libft: " $(GREEN_COLOR) $< $(DEFAULT_COLOR) 
 	@cc $(GCC_FLAGS) -c $< -o $@ -I $(LIBFT_INCLUDES_DIR)/
 
