@@ -42,7 +42,8 @@ LIBFT_OUT_OBJS = ft_putchar.o ft_putwchar.o \
 	ft_printf_putnbr.o ft_printf_putonbr.o ft_printf_puthexanbr.o \
 	ft_printf_nbrs.o ft_printf_putaddr.o ft_printf_padding.o \
 	ft_printf_colors.o ft_printf_chars_written.o \
-	ft_printf_fd.o ft_printf_putbinary.o ft_printf_setup_ops.o
+	ft_printf_fd.o ft_printf_putbinary.o ft_printf_setup_ops.o \
+	ft_printf_types.o
 
 LIBFT_STRING_OBJS = ft_strlen.o ft_strdup.o ft_strcpy.o \
 	ft_strncpy.o ft_strcat.o ft_strncat.o ft_strlcat.o \
@@ -72,7 +73,7 @@ LIBFT_OBJS_DIRS = $(LIBFT_IN_OBJS_DIR) $(LIBFT_LIST_OBJS_DIR) \
 LIBFT_SRCS_DIR = srcs
 
 LIBFT_INCLUDES_DIR = includes
-LIBFT_INCLUDES_FILES = ft_printf ft_printf_colors ft_printf_put libft
+LIBFT_INCLUDES_FILES = ft_printf ft_printf_colors libft
 LIBFT_HEADERS = $(addsuffix .h, $(patsubst %, $(LIBFT_INCLUDES_DIR)/%, $(LIBFT_INCLUDES_FILES)))
 
 OBJS = $(addprefix $(LIBFT_IN_OBJS_DIR)/, $(LIBFT_IN_OBJS))

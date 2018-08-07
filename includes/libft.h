@@ -20,6 +20,7 @@
 # include <unistd.h>
 # include <fcntl.h>
 # include <stdarg.h>
+# include "ft_printf.h"
 # define BUFF_SIZE 4096
 
 typedef unsigned char	t_uchar;
