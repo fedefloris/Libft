@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: akaseris <akaseris@student.42.fr>          +#+  +:+       +#+         #
+#    By: ffloris <ffloris@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/13 09:39:19 by ffloris           #+#    #+#              #
-#    Updated: 2018/06/26 10:15:55 by ffloris          ###   ########.fr        #
+#    Updated: 2018/08/22 16:10:17 by ffloris          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libft.a
 
 GCC_FLAGS = -Werror -Wextra -Wall
 
-LIBFT_IN_OBJS = get_next_line.o get_next.o
+LIBFT_IN_OBJS = ft_get_next_line.o ft_get_next.o
 
 LIBFT_LIST_OBJS = ft_lstnew.o ft_lstcpy.o ft_lstappend.o ft_lstremove.o \
 	ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstfind.o \
@@ -99,9 +99,9 @@ $(NAME): $(LIBFT_OBJS_DIRS) $(OBJS) $(LIBFT_HEADERS)
 
 $(LIBFT_OBJS_DIRS):
 	@mkdir -p $(LIBFT_OBJS_DIRS)
-	
+
 $(LIBFT_OBJS_DIR)/%.o: $(LIBFT_SRCS_DIR)/%.c $(LIBFT_HEADERS)
-	@echo "Libft: " $(GREEN_COLOR) $< $(DEFAULT_COLOR) 
+	@echo "Libft: " $(GREEN_COLOR) $< $(DEFAULT_COLOR)
 	@cc $(GCC_FLAGS) -c $< -o $@ -I $(LIBFT_INCLUDES_DIR)/
 
 clean:
