@@ -3,14 +3,18 @@ My implementation of some of the Standard C Library functions + some additional 
 
 
 ## What is libft?
-The goal of this project is to re-implement some standard C library functions and some additional ones that we'll be allowed to use in every project written in C.
+The goal of this project is to re-implement some standard C library functions and some additional ones that we'll be allowed 
+to use in every project written in C.
 
+For more details look at the [subject](subject.pdf)
 
 ## How do I use the library?
-
-
-## How do I test it?
-
+```
+git clone https://github.com/fedefloris/Libft.git
+cd Libft
+make
+```
+Now you should see a '*libft.a*' file in the root folder.
 
 ## Example usage
 
