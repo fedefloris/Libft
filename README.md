@@ -17,7 +17,7 @@ make
 Now you should see a '*libft.a*' file in the root folder.
 
 ## Example usage
-
+![Alt Text](materials/example.gif)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
