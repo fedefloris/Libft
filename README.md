@@ -16,7 +16,7 @@ make
 ```
 Now you should see a '*libft.a*' file in the root folder.
 
-## Example usage
+## Usage example
 ![Alt Text](materials/example.gif)
 
 ## License
