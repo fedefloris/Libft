@@ -10,9 +10,7 @@ For more details look at the [subject](subject.pdf)
 
 ## How do I use the library?
 ```
-git clone https://github.com/fedefloris/Libft.git
-cd Libft
-make
+git clone https://github.com/fedefloris/Libft.git && cd Libft && make
 ```
 Now you should see a '*libft.a*' file in the root folder.
 
