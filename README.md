@@ -2,8 +2,7 @@
 My implementation of some of the Standard C Library functions + some additional ones.
 
 ## What is libft?
-The goal of this project is to re-implement some standard C library functions + some additional ones that we'll be allowed 
-to use in every 42 project written in C.
+The goal of this project is to re-implement some standard C library functions + some additional ones that we gonna use in every 42 project written in C.
 
 For more details look at the [subject](subject.pdf)
 
