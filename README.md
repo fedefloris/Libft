@@ -4,7 +4,7 @@ My implementation of some of the Standard C Library functions + some additional 
 ## What is libft?
 The goal of this project is to re-implement some standard C library functions + some additional ones that we gonna use in every 42 project written in C.
 
-For more details look at the [subject](subject.pdf)
+For more details look at the [subject](subject.pdf).
 
 ## How do I use the library?
 ```
@@ -26,4 +26,4 @@ int main(void)
 ```
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
