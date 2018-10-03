@@ -14,7 +14,7 @@ Now you should see a '*libft.a*' file in the root folder.
 ```
 gcc your_file.c libft.a -I includes
 ```
-Example of your_file.c:
+Example of '*your_file.c*':
 ```
 #include "libft.h"
 
