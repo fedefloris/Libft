@@ -6,7 +6,7 @@
 #    By: ffloris <ffloris@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/13 09:39:19 by ffloris           #+#    #+#              #
-#    Updated: 2018/08/22 16:10:17 by ffloris          ###   ########.fr        #
+#    Updated: 2018/10/06 15:27:33 by ffloris          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -115,4 +115,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all init_print clean fclean re
