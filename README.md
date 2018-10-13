@@ -2,7 +2,7 @@
 My personal C library used at 42Born2Code.
 
 ## What is libft?
-The goal of this project is to re-implement some standard C library functions + some additional ones that we gonna use in every 42 project written in C.
+Libft is a 42 project where we have to re-implement some standard C library functions + some additional ones that we gonna use in every project written in C.
 
 For more details look at the [subject](subject.pdf).
 
