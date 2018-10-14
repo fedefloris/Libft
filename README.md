@@ -10,11 +10,11 @@ For more details look at the [subject](subject.pdf).
 ```console
 git clone https://github.com/fedefloris/Libft.git && cd Libft && make
 ```
-Now you should see a '*libft.a*' file in the root folder.
+Now you should see a **libft.a** file in the root folder.
 ```console
 gcc your_file.c libft.a -I includes
 ```
-Example of '*your_file.c*':
+Example of **your_file.c**:
 ```c
 #include "libft.h"
 
