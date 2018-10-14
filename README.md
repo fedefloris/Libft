@@ -7,15 +7,15 @@ Libft is a 42 project where we have to re-implement some standard C library func
 For more details look at the [subject](subject.pdf).
 
 ## How do I use the library?
-```
+```console
 git clone https://github.com/fedefloris/Libft.git && cd Libft && make
 ```
 Now you should see a '*libft.a*' file in the root folder.
-```
+```console
 gcc your_file.c libft.a -I includes
 ```
 Example of '*your_file.c*':
-```
+```c
 #include "libft.h"
 
 int main(void)
