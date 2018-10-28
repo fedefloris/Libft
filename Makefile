@@ -19,7 +19,8 @@ LIBFT_IN_OBJS = ft_get_next_line.o ft_get_next.o
 LIBFT_LIST_OBJS = ft_lstnew.o ft_lstcpy.o ft_lstappend.o ft_lstremove.o \
 	ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstfind.o \
 	ft_lstmap.o ft_lstsize.o ft_lstlast.o ft_lstat.o \
-	ft_lstreverse.o ft_lstmerge.o ft_lstsort.o ft_lstsorted.o
+	ft_lstreverse.o ft_lstmerge.o ft_lstsort.o ft_lstsorted.o \
+	ft_lstmiddle.o
 
 LIBFT_MATH_OBJS = ft_abs.o ft_clamp.o ft_sqrt.o ft_pow.o
 

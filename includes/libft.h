@@ -150,6 +150,7 @@ void					ft_lstreverse(t_list **lst);
 void					ft_lstmerge(t_list **lst1, t_list *lst2);
 void					ft_lstsort(t_list **lst, int (*cmp)());
 int						ft_lstsorted(t_list *a, int (*cmp)());
+t_list				*ft_lstmiddle(t_list *head);
 
 int						ft_abs(int a);
 int						ft_clamp(int a, int min, int max);

@@ -16,13 +16,15 @@ void	ft_lstappend(t_list **lst, t_list *new)
 {
 	t_list	*list;
 
-	if (lst && (*lst) != NULL)
+	if (!lst)
+		return ;
+	if (*lst)
 	{
 		list = *lst;
 		while (list->next != NULL)
 			list = list->next;
 		list->next = new;
 	}
-	else if (lst)
-		(*lst) = new;
+	else
+		*lst = new;
 }

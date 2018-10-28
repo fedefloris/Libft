@@ -17,7 +17,7 @@ t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	t_list	*res;
 	t_list	*res_last;
 
-	if (!lst)
+	if (!lst || !f)
 		return (NULL);
 	res_last = f(lst);
 	res = res_last;

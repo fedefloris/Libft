@@ -14,11 +14,11 @@
 
 t_list		*ft_lstfind(t_list *lst, void *content, int (*cmp)())
 {
+	if (!cmp)
+		return (NULL);
 	while (lst)
 	{
-		if (cmp && !(*cmp)(lst->content, content))
-			return (lst);
-		else if (lst->content == content)
+		if (!cmp(lst->content, content))
 			return (lst);
 		lst = lst->next;
 	}
