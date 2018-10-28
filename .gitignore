@@ -4,7 +4,7 @@
 # Executable && lib
 *.a
 a.out
-/ft_ls
+libft.a
 
 # Compiled sources
 *obj
