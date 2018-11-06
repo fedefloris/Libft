@@ -11,7 +11,7 @@ libft.a
 *.o
 
 # Valgrind folder
-ft_ls.dSYM
+libft.dSYM
 
 # Secure malloc tool residues
 .sym_logs
