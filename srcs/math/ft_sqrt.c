@@ -10,14 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_sqrt(int a)
-{
-	int	i;
+#include "libft.h"
 
-	i = 0;
-	while (i * i < a)
-		i++;
-	if (i * i == a)
-		return (i);
-	return (0);
+static double abs_double(double a)
+{
+	return (a >= 0) ? a : -a;
+}
+
+double		ft_sqrt(double a)
+{
+	double epsilon;
+	double guess;
+
+	guess = a;
+	epsilon = 1e-15;
+	while (abs_double(guess - a / guess) > epsilon * guess)
+		guess = (a / guess + guess) / 2.0;
+	return (guess);
 }

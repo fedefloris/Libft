@@ -154,7 +154,7 @@ t_list				*ft_lstmiddle(t_list *head);
 
 int						ft_abs(int a);
 int						ft_clamp(int a, int min, int max);
-int						ft_sqrt(int a);
+double				ft_sqrt(double a);
 int						ft_pow(int b, int e);
 int						ft_get_next_line(const int fd, char **line);
 int						ft_get_next(const int fd, char **line, char c);
