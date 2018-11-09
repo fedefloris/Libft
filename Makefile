@@ -1,5 +1,5 @@
-#                                                                              #
 # **************************************************************************** #
+#                                                                              #
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
@@ -91,22 +91,14 @@ OBJS += $(addprefix $(LIBFT_STRING_OBJS_DIR)/, $(LIBFT_STRING_OBJS))
 
 SRCS = $(patsubst $(LIBFT_OBJS_DIR)/%.o, $(LIBFT_SRCS_DIR)/%.c, $(OBJS))
 
-CLEAR_LINE = "\033[1A\033[K"
 GREEN_COLOR = "\033[0;32m"
 DEFAULT_COLOR = "\033[0m"
-CREATED_TEXT = $(NAME) "created!\n"
-FINAL_TEXT = "Done"
+CREATED_TEXT = $(NAME) "created!"
 
-all: init_print $(NAME) end_print
-
-init_print:
-	@echo
-
-end_print:
-	@echo $(CLEAR_LINE)$(FINAL_TEXT)
+all: $(NAME)
 
 $(NAME): $(LIBFT_OBJS_DIRS) $(OBJS) $(LIBFT_HEADERS)
-		@ar rc $(NAME) $(OBJS)
+	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
 	@echo $(CREATED_TEXT)
 
@@ -114,7 +106,7 @@ $(LIBFT_OBJS_DIRS):
 	@mkdir -p $(LIBFT_OBJS_DIRS)
 
 $(LIBFT_OBJS_DIR)/%.o: $(LIBFT_SRCS_DIR)/%.c $(LIBFT_HEADERS)
-	@echo $(CLEAR_LINE)Creating '$(NAME)': $(GREEN_COLOR) $< $(DEFAULT_COLOR)
+	@echo Libft: $(GREEN_COLOR) $< $(DEFAULT_COLOR)
 	@cc $(GCC_FLAGS) -c $< -o $@ -I $(LIBFT_INCLUDES_DIR)/
 
 clean:
