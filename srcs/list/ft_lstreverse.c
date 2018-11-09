@@ -18,17 +18,16 @@ void	ft_lstreverse(t_list **lst)
 	t_list	*prev;
 	t_list	*actual;
 
-	if (lst)
+	if (!lst)
+		return ;
+	actual = *lst;
+	prev = NULL;
+	while (actual)
 	{
-		actual = *lst;
-		prev = NULL;
-		while (actual)
-		{
-			next = actual->next;
-			actual->next = prev;
-			prev = actual;
-			actual = next;
-		}
-		*lst = prev;
+		next = actual->next;
+		actual->next = prev;
+		prev = actual;
+		actual = next;
 	}
+	*lst = prev;
 }
