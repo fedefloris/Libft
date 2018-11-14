@@ -6,7 +6,7 @@
 /*   By: ffloris <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/26 22:04:52 by ffloris           #+#    #+#             */
-/*   Updated: 2018/02/26 22:05:04 by ffloris          ###   ########.fr       */
+/*   Updated: 2018/11/14 17:58:27 by ffloris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static t_list	*sort(t_list *head, int (*cmp)())
 	return (merge(sort(head, cmp), sort(after_middle, cmp), cmp));
 }
 
-void					ft_lstsort(t_list **lst, int (*cmp)())
+void			ft_lstsort(t_list **lst, int (*cmp)())
 {
 	if (!lst || !cmp)
 		return ;

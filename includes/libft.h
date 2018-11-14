@@ -6,7 +6,7 @@
 /*   By: ffloris <ffloris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/03 13:39:16 by ffloris           #+#    #+#             */
-/*   Updated: 2018/10/06 21:29:00 by ffloris          ###   ########.fr       */
+/*   Updated: 2018/11/14 17:56:44 by ffloris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,11 +150,11 @@ void					ft_lstreverse(t_list **lst);
 void					ft_lstmerge(t_list **lst1, t_list *lst2);
 void					ft_lstsort(t_list **lst, int (*cmp)());
 int						ft_lstsorted(t_list *a, int (*cmp)());
-t_list				*ft_lstmiddle(t_list *head);
+t_list					*ft_lstmiddle(t_list *head);
 
 int						ft_abs(int a);
 int						ft_clamp(int a, int min, int max);
-double				ft_sqrt(double a);
+double					ft_sqrt(double a);
 int						ft_pow(int b, int e);
 int						ft_get_next_line(const int fd, char **line);
 int						ft_get_next(const int fd, char **line, char c);
