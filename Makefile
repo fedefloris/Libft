@@ -118,4 +118,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all init_print end_print clean fclean re
+.PHONY: all clean fclean re
