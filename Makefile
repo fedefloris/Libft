@@ -35,6 +35,7 @@ LIBFT_OUT_OBJS = ft_putchar.o ft_putwchar.o \
 	ft_putwchar_fd.o ft_putchar_fd.o ft_putstr_fd.o \
 	ft_putwstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
 	ft_putnstr.o ft_putnstr_fd.o ft_putnwstr.o ft_putnwstr_fd.o \
+	config_buffer.o empty_the_buffer.o send_to_buffer.o
 
 LIBFT_OUT_FT_PRINTF_OBJS = ft_printf.o ft_printf_parse.o \
 	ft_printf_put.o ft_printf_putid.o \
