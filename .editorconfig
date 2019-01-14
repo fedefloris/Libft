@@ -1,13 +1,11 @@
-# top-most EditorConfig file
+# Top-most EditorConfig file
 root = true
 
-# Unix-style newlines with a newline ending every file
-[*]
-end_of_line = lf
+# File settings
+[{Makefile,*.{c,h}}]
+trim_trailing_whitespace = true
 insert_final_newline = true
-
-# Set default charset
-[*.{c,h}]
+end_of_line = lf
 charset = utf-8
 indent_style = tab
 indent_size = 4
