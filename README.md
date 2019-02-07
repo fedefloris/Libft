@@ -2,7 +2,7 @@
 ![](https://img.shields.io/github/license/fedefloris/Libft.svg)
 
 ## Challenge
-Libft is a 42 project where we have to re-implement some standard C library functions + some additional ones.
+Libft is a 42 project that requires us to re-implement some standard C library functions + some additional ones.
 
 For more details look at the [subject](subject.pdf).
 
