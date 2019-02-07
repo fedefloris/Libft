@@ -1,12 +1,12 @@
 # Libft - 42Born2Code
-My personal C library used at 42Born2Code.
+![](https://img.shields.io/github/license/fedefloris/Libft.svg)
 
-## What is libft?
+## Challenge
 Libft is a 42 project where we have to re-implement some standard C library functions + some additional ones.
 
 For more details look at the [subject](subject.pdf).
 
-## How do I use the library?
+## Using the project
 ```console
 git clone https://github.com/fedefloris/Libft.git && cd Libft && make
 ```
