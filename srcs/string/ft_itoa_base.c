@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-static void	set_dimensions(int value, int base, unsigned int *value_size,
-															int *length)
+static void		set_dimensions(intmax_t value, int base,
+	uintmax_t *value_size, int *length)
 {
-	unsigned int	value_u;
+	uintmax_t	value_u;
 
 	if (value < 0)
 		value_u = -value;
@@ -30,7 +30,8 @@ static void	set_dimensions(int value, int base, unsigned int *value_size,
 	}
 }
 
-static void	sign_checker(int value, int base, int *neg, unsigned int *value_u)
+static void		sign_checker(intmax_t value, int base,
+	int *neg, uintmax_t *value_u)
 {
 	*neg = 0;
 	if (value < 0)
@@ -43,14 +44,14 @@ static void	sign_checker(int value, int base, int *neg, unsigned int *value_u)
 		*value_u = value;
 }
 
-static char	*itoa_base(int value, int base, unsigned int value_size,
-															int length)
+static char		*itoa_base(intmax_t value, int base,
+	uintmax_t value_size, int length)
 {
+	uintmax_t		value_u;
 	char			*res;
 	int				out;
 	int				neg;
 	int				i;
-	unsigned int	value_u;
 
 	sign_checker(value, base, &neg, &value_u);
 	if (!(res = (char*)malloc(sizeof(char) * (length + neg + 1))))
@@ -62,7 +63,7 @@ static char	*itoa_base(int value, int base, unsigned int value_size,
 	{
 		out = value_u / value_size;
 		if (out > 9 && out != 16)
-			out += 'A' - '9' - 1;
+			out += 'a' - '9' - 1;
 		res[i++] = '0' + out;
 		value_u %= value_size;
 		value_size /= base;
@@ -71,15 +72,13 @@ static char	*itoa_base(int value, int base, unsigned int value_size,
 	return (res);
 }
 
-char		*ft_itoa_base(int value, int base)
+char			*ft_itoa_base(intmax_t value, int base)
 {
-	char			*res;
-	unsigned int	value_size;
+	uintmax_t		value_size;
 	int				length;
 
 	if (base < 2 || base > 16)
 		return (NULL);
 	set_dimensions(value, base, &value_size, &length);
-	res = itoa_base(value, base, value_size, length);
-	return (res);
+	return (itoa_base(value, base, value_size, length));
 }

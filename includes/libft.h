@@ -123,8 +123,8 @@ char					*ft_strjoinfree(char *ret, char *s1, char *s2);
 char					*ft_strtrim(char const *s);
 char					**ft_strsplit(char const *s, char c);
 char					**ft_split(char const *s);
-char					*ft_itoa(int n);
-char					*ft_itoa_base(int n, int base);
+char					*ft_itoa(intmax_t n);
+char					*ft_itoa_base(intmax_t n, int base);
 
 void					ft_putchar(char c);
 void					ft_putchar_fd(char c, int fd);
