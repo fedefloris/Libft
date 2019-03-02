@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   send_to_buffer.c                                   :+:      :+:    :+:   */
+/*   ft_config_buffer.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ffloris <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,23 +12,7 @@
 
 #include "libft.h"
 
-static void		send_str_to_buffer(t_buffer *buffer, char *str)
+void		ft_config_buffer(t_buffer *buffer)
 {
-	while (*str)
-	{
-		if (buffer->content_index >= BUFFER_SIZE)
-			empty_the_buffer(buffer);
-		buffer->content[buffer->content_index++] = *str++;
-	}
-}
-
-void			send_to_buffer(t_buffer *buffer, ...)
-{
-	va_list		args;
-	char		*str;
-
-	va_start(args, buffer);
-	while ((str = va_arg(args, char*)))
-		send_str_to_buffer(buffer, str);
-	va_end(args);
+	ft_bzero(buffer, sizeof(*buffer));
 }

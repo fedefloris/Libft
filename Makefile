@@ -34,8 +34,10 @@ LIBFT_OUT_OBJS = ft_putchar.o ft_putwchar.o \
 	ft_putstr.o ft_putwstr.o ft_putendl.o ft_putnbr.o \
 	ft_putwchar_fd.o ft_putchar_fd.o ft_putstr_fd.o \
 	ft_putwstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
-	ft_putnstr.o ft_putnstr_fd.o ft_putnwstr.o ft_putnwstr_fd.o \
-	config_buffer.o empty_the_buffer.o send_to_buffer.o
+	ft_putnstr.o ft_putnstr_fd.o ft_putnwstr.o ft_putnwstr_fd.o
+
+LIBFT_OUT_BUFFER_OBJS = ft_config_buffer.o ft_empty_the_buffer.o \
+	ft_send_to_buffer.o
 
 LIBFT_OUT_FT_PRINTF_OBJS = ft_printf.o ft_printf_parse.o \
 	ft_printf_put.o ft_printf_putid.o \
@@ -69,12 +71,13 @@ LIBFT_LIST_OBJS_DIR = $(LIBFT_OBJS_DIR)/list
 LIBFT_MATH_OBJS_DIR = $(LIBFT_OBJS_DIR)/math
 LIBFT_MEMORY_OBJS_DIR = $(LIBFT_OBJS_DIR)/memory
 LIBFT_OUT_OBJS_DIR = $(LIBFT_OBJS_DIR)/out
+LIBFT_OUT_BUFFER_OBJS_DIR = $(LIBFT_OUT_OBJS_DIR)/buffer
 LIBFT_OUT_FT_PRINTF_OBJS_DIR = $(LIBFT_OUT_OBJS_DIR)/ft_printf
 LIBFT_STRING_OBJS_DIR = $(LIBFT_OBJS_DIR)/string
 LIBFT_OBJS_DIRS = $(LIBFT_IN_OBJS_DIR) $(LIBFT_LIST_OBJS_DIR) \
 	$(LIBFT_MATH_OBJS_DIR) $(LIBFT_MEMORY_OBJS_DIR) \
-	$(LIBFT_OUT_OBJS_DIR) $(LIBFT_OUT_FT_PRINTF_OBJS_DIR) \
-	$(LIBFT_STRING_OBJS_DIR)
+	$(LIBFT_OUT_OBJS_DIR) $(LIBFT_OUT_BUFFER_OBJS_DIR) \
+	$(LIBFT_OUT_FT_PRINTF_OBJS_DIR) $(LIBFT_STRING_OBJS_DIR)
 
 LIBFT_SRCS_DIR = srcs
 
@@ -87,6 +90,7 @@ OBJS += $(addprefix $(LIBFT_LIST_OBJS_DIR)/, $(LIBFT_LIST_OBJS))
 OBJS += $(addprefix $(LIBFT_MATH_OBJS_DIR)/, $(LIBFT_MATH_OBJS))
 OBJS += $(addprefix $(LIBFT_MEMORY_OBJS_DIR)/, $(LIBFT_MEMORY_OBJS))
 OBJS += $(addprefix $(LIBFT_OUT_OBJS_DIR)/, $(LIBFT_OUT_OBJS))
+OBJS += $(addprefix $(LIBFT_OUT_BUFFER_OBJS_DIR)/, $(LIBFT_OUT_BUFFER_OBJS))
 OBJS += $(addprefix $(LIBFT_OUT_FT_PRINTF_OBJS_DIR)/, $(LIBFT_OUT_FT_PRINTF_OBJS))
 OBJS += $(addprefix $(LIBFT_STRING_OBJS_DIR)/, $(LIBFT_STRING_OBJS))
 

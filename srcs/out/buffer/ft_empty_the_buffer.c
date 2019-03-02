@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   empty_the_buffer.c                                 :+:      :+:    :+:   */
+/*   ft_empty_the_buffer.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ffloris <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,8 +12,8 @@
 
 #include "libft.h"
 
-void		empty_the_buffer(t_buffer *buffer)
+void		ft_empty_the_buffer(t_buffer *buffer)
 {
 	write(1, buffer->content, buffer->content_index);
-	config_buffer(buffer);
+	ft_config_buffer(buffer);
 }

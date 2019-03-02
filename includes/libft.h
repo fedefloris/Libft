@@ -23,7 +23,7 @@
 # include "ft_printf.h"
 # define BUFF_SIZE 4096
 # define BUFFER_SIZE 2500
-# define SEND_TO_BUFFER(buffer, ...) send_to_buffer(buffer, __VA_ARGS__, NULL)
+# define SEND_TO_BUFFER(buff, ...) ft_send_to_buffer(buff, __VA_ARGS__, NULL)
 
 typedef unsigned char	t_uchar;
 
@@ -47,9 +47,9 @@ typedef struct			s_buffer
 	size_t				content_index;
 }						t_buffer;
 
-void					config_buffer(t_buffer *buffer);
-void					empty_the_buffer(t_buffer *buffer);
-void					send_to_buffer(t_buffer *buffer, ...);
+void					ft_config_buffer(t_buffer *buffer);
+void					ft_empty_the_buffer(t_buffer *buffer);
+void					ft_send_to_buffer(t_buffer *buffer, ...);
 
 void					*ft_memset(void *b, int c, size_t len);
 void					ft_bzero(void *s, size_t n);
