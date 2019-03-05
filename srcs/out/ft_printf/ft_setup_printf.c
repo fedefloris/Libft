@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_setup_printf.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ffloris <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -13,17 +13,15 @@
 #include "libft.h"
 #include "ft_printf.h"
 
-int				ft_printf(const char *s, ...)
+t_printf	ft_setup_printf(const char *s, int fd, va_list *params)
 {
 	t_printf	tp;
-	va_list		params;
-	int			result;
 
-	if (!s)
-		return (-1);
-	va_start(params, s);
-	tp = ft_setup_printf(s, 1, &params);
-	result = ft_printf_parse(&tp);
-	va_end(params);
-	return (result);
+	tp.s = s;
+	tp.params = params;
+	tp.index = 0;
+	tp.fd = fd;
+	tp.chrs_written = 0;
+	tp.exit = 0;
+	return (tp);
 }

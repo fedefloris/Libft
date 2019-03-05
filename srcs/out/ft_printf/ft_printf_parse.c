@@ -17,7 +17,7 @@ t_fmt			g_fmts[] =
 {
 	{PUT_ID, &ft_printf_put},
 	{COLORS_ID, &ft_printf_colors},
-	{FD_ID, &ft_printf_fd},
+	{FD_ID, &ft_printf_fd_fmt},
 	{NULL, NULL}
 };
 

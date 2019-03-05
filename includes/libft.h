@@ -170,5 +170,6 @@ double					ft_sqrt(double a);
 int						ft_pow(int b, int e);
 int						ft_get_next_line(const int fd, char **line);
 int						ft_get_next(const int fd, char **line, char c);
+int						ft_printf_fd(int fd, const char *s, ...);
 int						ft_printf(const char *s, ...);
 #endif

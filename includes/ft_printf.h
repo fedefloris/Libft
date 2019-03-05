@@ -109,9 +109,11 @@ void					set_width(t_fmt_ops *ops);
 void					set_precision(t_fmt_ops *ops);
 void					set_length(t_fmt_ops *ops);
 
+t_printf				ft_setup_printf(const char *s,
+							int fd, va_list *params);
 int						ft_printf_parse(t_printf *tp);
 void					ft_printf_colors(t_printf *tp);
-void					ft_printf_fd(t_printf *tp);
+void					ft_printf_fd_fmt(t_printf *tp);
 void					ft_printf_put(t_printf *tp);
 void					ft_printf_putid(t_fmt_ops *ops);
 void					ft_printf_putstr(t_fmt_ops *ops);
@@ -125,15 +127,16 @@ void					ft_printf_putbinary(t_fmt_ops *ops);
 void					ft_printf_putaddr(t_fmt_ops *ops);
 void					ft_printf_chars_written(t_fmt_ops *ops);
 uintmax_t				ft_printf_get_unbr_length(uintmax_t nbr,
-														uintmax_t base);
+							uintmax_t base);
 void					ft_printf_put_uintmax_nbr(uintmax_t n, int fd,
-									uintmax_t base, int hexa_uppercase);
+							uintmax_t base, int hexa_uppercase);
 uintmax_t				ft_printf_get_unbr(t_fmt_ops *ops);
 uintmax_t				ft_printf_get_nbr(t_fmt_ops *ops, int *neg);
 
 void					padding_with(t_fmt_ops *ops, size_t params_size,
-														char value);
+							char value);
 void					padding_with_prec(t_fmt_ops *ops, size_t params_size,
-														char value);
+							char value);
 void					add_padding(t_fmt_ops *ops, size_t params_size);
+
 #endif

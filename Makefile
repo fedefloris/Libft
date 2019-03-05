@@ -48,8 +48,9 @@ LIBFT_OUT_FT_PRINTF_OBJS = ft_printf.o ft_printf_parse.o \
 	ft_printf_putnbr.o ft_printf_putonbr.o ft_printf_puthexanbr.o \
 	ft_printf_nbrs.o ft_printf_putaddr.o ft_printf_padding.o \
 	ft_printf_colors.o ft_printf_chars_written.o \
-	ft_printf_fd.o ft_printf_putbinary.o ft_printf_setup_ops.o \
-	ft_printf_types.o
+	ft_printf_fd.o ft_printf_fd_fmt.o \
+	ft_setup_printf.o ft_printf_putbinary.o \
+	ft_printf_setup_ops.o ft_printf_types.o
 
 LIBFT_STRING_OBJS = ft_strlen.o ft_strdup.o ft_strcpy.o \
 	ft_strncpy.o ft_strcat.o ft_strncat.o ft_strlcat.o \
