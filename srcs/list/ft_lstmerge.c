@@ -16,13 +16,15 @@ void	ft_lstmerge(t_list **lst1, t_list *lst2)
 {
 	t_list	*list;
 
-	list = *lst1;
-	if (lst1 && list)
+	if (!lst1)
+		return ;
+	if (*lst1)
 	{
+		list = *lst1;
 		while (list->next != NULL)
 			list = list->next;
 		list->next = lst2;
 	}
 	else
-		(*lst1) = lst2;
+		*lst1 = lst2;
 }
