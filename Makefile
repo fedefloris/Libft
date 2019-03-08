@@ -97,8 +97,8 @@ OBJS += $(addprefix $(LIBFT_STRING_OBJS_DIR)/, $(LIBFT_STRING_OBJS))
 
 SRCS = $(patsubst $(LIBFT_OBJS_DIR)/%.o, $(LIBFT_SRCS_DIR)/%.c, $(OBJS))
 
-GREEN_COLOR = "\033[0;32m"
-DEFAULT_COLOR = "\033[0m"
+GREEN_COLOR = $(shell tput setaf 2)
+DEFAULT_COLOR = $(shell tput setaf 7)
 CREATED_TEXT = $(NAME) "created!"
 
 all: $(NAME)
