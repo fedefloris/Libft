@@ -32,7 +32,7 @@
 # define RESET_ID "reset"
 # define RESET_VALUE "\033[0m"
 # define EOC_ID "eoc"
-# define EOC_VALUE "\033[0m"
+# define EOC_VALUE RESET_VALUE
 
 typedef struct		s_sequence
 {
