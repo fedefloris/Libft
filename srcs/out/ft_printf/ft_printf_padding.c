@@ -32,7 +32,7 @@ void	padding_with(t_fmt_ops *ops, size_t param_size, char value)
 }
 
 void	padding_with_prec(t_fmt_ops *ops,
-								size_t param_size, char value)
+			size_t param_size, char value)
 {
 	padding(ops, ops->precision, param_size, value);
 }

@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <stdarg.h>
 # include <wchar.h>
+
 # define CONVERT_FLAG "#"
 # define ZEROS_FLAG "0"
 # define LEFT_FLAG "-"
@@ -25,10 +26,12 @@
 # define WIDTH_PARAM "*"
 # define PRECISION_NUMBER "."
 # define PRECISION_PARAM "*"
+
 # define SHORT_LENGTH "h"
 # define LONG_LENGTH "l"
 # define INTMAX_LENGTH "j"
 # define SIZE_T_LENGTH "z"
+
 # define TYPE_STRING "s"
 # define TYPE_WSTRING "S"
 # define TYPE_POINTER "p"
@@ -45,9 +48,10 @@
 # define TYPE_CHAR "c"
 # define TYPE_WCHAR "C"
 # define TYPE_CHARS_WRITTEN "n"
+
 # define PUT_ID "%"
-# define COLORS_ID "$"
-# define END_COLORS_ID "$"
+# define SEQUENCE_ID "$"
+# define END_SEQUENCE_ID "$"
 # define FD_ID "^"
 # define END_FD_ID "^"
 # define FD_PARAM "*"
@@ -112,7 +116,7 @@ void					set_length(t_fmt_ops *ops);
 t_printf				ft_setup_printf(const char *s,
 							int fd, va_list *params);
 int						ft_printf_parse(t_printf *tp);
-void					ft_printf_colors(t_printf *tp);
+void					ft_printf_sequences(t_printf *tp);
 void					ft_printf_fd_fmt(t_printf *tp);
 void					ft_printf_put(t_printf *tp);
 void					ft_printf_putid(t_fmt_ops *ops);

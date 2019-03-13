@@ -77,7 +77,7 @@ uintmax_t		ft_printf_get_unbr(t_fmt_ops *ops)
 }
 
 void			ft_printf_put_uintmax_nbr(uintmax_t n, int fd, uintmax_t base,
-														int hexa_uppercase)
+					int hexa_uppercase)
 {
 	uintmax_t		nbr;
 	char			off;
