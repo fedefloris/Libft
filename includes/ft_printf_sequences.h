@@ -13,26 +13,26 @@
 #ifndef FT_PRINTF_SEQUENCES_H
 # define FT_PRINTF_SEQUENCES_H
 
-# define RED_ID "red"
-# define RED_VALUE "\033[31m"
-# define BLACK_ID "black"
-# define BLACK_VALUE "\033[30m"
-# define GREEN_ID "green"
-# define GREEN_VALUE "\033[32m"
-# define YELLOW_ID "yellow"
-# define YELLOW_VALUE "\033[33m"
-# define BLUE_ID "blue"
-# define BLUE_VALUE "\033[34m"
-# define MAGENTA_ID "magenta"
-# define MAGENTA_VALUE "\033[35m"
-# define CYAN_ID "cyan"
-# define CYAN_VALUE "\033[36m"
-# define WHITE_ID "white"
-# define WHITE_VALUE "\033[37m"
+# define RED_COLOR_ID "red"
+# define RED_COLOR_VALUE "\033[31m"
+# define BLACK_COLOR_ID "black"
+# define BLACK_COLOR_VALUE "\033[30m"
+# define GREEN_COLOR_ID "green"
+# define GREEN_COLOR_VALUE "\033[32m"
+# define YELLOW_COLOR_ID "yellow"
+# define YELLOW_COLOR_VALUE "\033[33m"
+# define BLUE_COLOR_ID "blue"
+# define BLUE_COLOR_VALUE "\033[34m"
+# define MAGENTA_COLOR_ID "magenta"
+# define MAGENTA_COLOR_VALUE "\033[35m"
+# define CYAN_COLOR_ID "cyan"
+# define CYAN_COLOR_VALUE "\033[36m"
+# define WHITE_COLOR_ID "white"
+# define WHITE_COLOR_VALUE "\033[37m"
 # define RESET_ID "reset"
 # define RESET_VALUE "\033[0m"
-# define EOC_ID "eoc"
-# define EOC_VALUE RESET_VALUE
+# define EOC_COLOR_ID "eoc"
+# define EOC_COLOR_VALUE RESET_VALUE
 
 typedef struct		s_sequence
 {
@@ -42,16 +42,16 @@ typedef struct		s_sequence
 
 t_sequence				g_sequences[] =
 {
-	{RED_ID, RED_VALUE},
-	{BLACK_ID, BLACK_VALUE},
-	{GREEN_ID, GREEN_VALUE},
-	{YELLOW_ID, YELLOW_VALUE},
-	{BLUE_ID, BLUE_VALUE},
-	{MAGENTA_ID, MAGENTA_VALUE},
-	{CYAN_ID, CYAN_VALUE},
-	{WHITE_ID, WHITE_VALUE},
+	{RED_COLOR_ID, RED_COLOR_VALUE},
+	{BLACK_COLOR_ID, BLACK_COLOR_VALUE},
+	{GREEN_COLOR_ID, GREEN_COLOR_VALUE},
+	{YELLOW_COLOR_ID, YELLOW_COLOR_VALUE},
+	{BLUE_COLOR_ID, BLUE_COLOR_VALUE},
+	{MAGENTA_COLOR_ID, MAGENTA_COLOR_VALUE},
+	{CYAN_COLOR_ID, CYAN_COLOR_VALUE},
+	{WHITE_COLOR_ID, WHITE_COLOR_VALUE},
 	{RESET_ID, RESET_VALUE},
-	{EOC_ID, EOC_VALUE},
+	{EOC_COLOR_ID, EOC_COLOR_VALUE},
 	{SEQUENCE_ID, SEQUENCE_ID},
 	{NULL, NULL}
 };
