@@ -14,7 +14,7 @@
 
 void	ft_putnstr_fd(const char *s, int fd, size_t n)
 {
-	if (!s || n <= 0)
+	if (!s || n == 0)
 		return ;
 	write(fd, s, n);
 }
