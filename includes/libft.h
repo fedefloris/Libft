@@ -122,7 +122,6 @@ char					*ft_strjoin(char const *s1, char const *s2);
 char					*ft_strjoinfree(char *ret, char *s1, char *s2);
 char					*ft_strtrim(char const *s);
 char					**ft_strsplit(char const *s, char c);
-char					**ft_split(char const *s);
 char					*ft_itoa(intmax_t n);
 char					*ft_itoa_base(intmax_t n, int base);
 
