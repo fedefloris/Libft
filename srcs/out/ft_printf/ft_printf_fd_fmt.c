@@ -6,7 +6,7 @@
 /*   By: ffloris <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/24 12:32:58 by ffloris           #+#    #+#             */
-/*   Updated: 2018/04/26 11:29:47 by ffloris          ###   ########.fr       */
+/*   Updated: 2019/03/20 15:07:10 by ffloris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 static void	move_next(t_printf *tp)
 {
-	while (tp->s[tp->index] &&
-			ft_strncmp(END_FD_ID, &tp->s[tp->index++], 1) != 0)
+	while (tp->s[tp->index]
+			&& ft_strncmp(END_FD_ID, &tp->s[tp->index++], 1) != 0)
 		;
 }
 

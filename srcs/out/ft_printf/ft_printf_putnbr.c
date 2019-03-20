@@ -6,7 +6,7 @@
 /*   By: ffloris <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/16 17:44:15 by ffloris           #+#    #+#             */
-/*   Updated: 2018/04/25 15:14:46 by ffloris          ###   ########.fr       */
+/*   Updated: 2019/03/20 15:06:39 by ffloris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,8 +89,8 @@ void		ft_printf_putnbr(t_fmt_ops *ops)
 
 	nbr_ops.neg = 0;
 	nbr_ops.sign = 0;
-	if (!ft_strncmp(ops->type, TYPE_DECIMAL, 1) ||
-		!ft_strncmp(ops->type, TYPE_LONG_DECIMAL, 1))
+	if (!ft_strncmp(ops->type, TYPE_DECIMAL, 1)
+		|| !ft_strncmp(ops->type, TYPE_LONG_DECIMAL, 1))
 		nbr_ops.nbr = ft_printf_get_unbr(ops);
 	else
 	{
@@ -101,8 +101,8 @@ void		ft_printf_putnbr(t_fmt_ops *ops)
 	if (!nbr_ops.nbr && ops->precision == -1)
 	{
 		putprefix(ops, &nbr_ops);
-		padding_with(ops, (nbr_ops.neg ||
-		(nbr_ops.sign && (ops->sign || ops->spaces))) ? 1 : 0, ' ');
+		padding_with(ops, (nbr_ops.neg
+			|| (nbr_ops.sign && (ops->sign || ops->spaces))) ? 1 : 0, ' ');
 		if (nbr_ops.neg || (nbr_ops.sign && (ops->sign || ops->spaces)))
 			ops->tp->chrs_written++;
 	}

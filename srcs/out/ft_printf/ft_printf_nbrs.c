@@ -6,7 +6,7 @@
 /*   By: ffloris <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 17:43:35 by ffloris           #+#    #+#             */
-/*   Updated: 2018/04/25 12:23:25 by ffloris          ###   ########.fr       */
+/*   Updated: 2019/03/20 15:05:43 by ffloris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ uintmax_t		ft_printf_get_unbr_length(uintmax_t nbr, uintmax_t base)
 
 static intmax_t	get_nbr(t_fmt_ops *ops)
 {
-	if (!ft_strncmp(ops->type, TYPE_LONG_INT, 1) ||
-		ops->long_type == 1)
+	if (!ft_strncmp(ops->type, TYPE_LONG_INT, 1)
+			|| ops->long_type == 1)
 		return (va_arg(*(ops->tp->params), long));
 	else if (ops->long_type == 2)
 		return (va_arg(*(ops->tp->params), long long));
@@ -58,9 +58,9 @@ uintmax_t		ft_printf_get_nbr(t_fmt_ops *ops, int *neg)
 
 uintmax_t		ft_printf_get_unbr(t_fmt_ops *ops)
 {
-	if (ops->long_type == 1 ||
-		!ft_strncmp(ops->type, TYPE_LONG_DECIMAL, 1) ||
-		!ft_strncmp(ops->type, TYPE_LONG_OCTAL, 1))
+	if (ops->long_type == 1
+		|| !ft_strncmp(ops->type, TYPE_LONG_DECIMAL, 1)
+		|| !ft_strncmp(ops->type, TYPE_LONG_OCTAL, 1))
 		return (va_arg(*(ops->tp->params), unsigned long));
 	else if (ops->long_type == 2)
 		return (va_arg(*(ops->tp->params), unsigned long long));

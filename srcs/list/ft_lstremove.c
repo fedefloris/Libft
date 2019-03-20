@@ -6,7 +6,7 @@
 /*   By: ffloris <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/26 17:40:09 by ffloris           #+#    #+#             */
-/*   Updated: 2018/02/26 17:40:10 by ffloris          ###   ########.fr       */
+/*   Updated: 2019/03/20 15:04:45 by ffloris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void	ft_lstremove(t_list **alst, void *content, int (*cmp)())
 	curr = *alst;
 	while (curr)
 	{
-		if ((cmp && (*cmp)(curr->content, content) == 0) ||
-			(curr->content == content))
+		if ((cmp && (*cmp)(curr->content, content) == 0)
+				|| (curr->content == content))
 		{
 			if (*alst != curr)
 				last->next = curr->next;
