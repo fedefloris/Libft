@@ -21,8 +21,11 @@
 # include <fcntl.h>
 # include <stdarg.h>
 # include "ft_printf.h"
+
 # define BUFF_SIZE 4096
+
 # define BUFFER_SIZE 2500
+# define CONFIG_BUFFER(buffer) ((buffer)->content_index = 0)
 # define SEND_TO_BUFFER(buff, ...) ft_send_to_buffer(buff, __VA_ARGS__, NULL)
 
 typedef unsigned char	t_uchar;
@@ -47,7 +50,6 @@ typedef struct			s_buffer
 	size_t				content_index;
 }						t_buffer;
 
-void					ft_config_buffer(t_buffer *buffer);
 void					ft_empty_the_buffer(t_buffer *buffer);
 void					ft_send_to_buffer(t_buffer *buffer, ...);
 
