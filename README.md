@@ -1,7 +1,7 @@
 # Libft - 42Born2Code
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/948242368e8949f0b8fdee9e7db0916b)](https://app.codacy.com/app/fedefloris/Libft?utm_source=github.com&utm_medium=referral&utm_content=fedefloris/Libft&utm_campaign=Badge_Grade_Settings)
 ## Challenge
-Libft is a 42 project that requires us to re-implement some standard C library functions + some additional ones.
+My personal C library used at 42Born2Code.
 
 For more details look at the [subject](subject.pdf).
 
